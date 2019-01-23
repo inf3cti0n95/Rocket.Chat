@@ -106,6 +106,59 @@ const toolbarButtons = (user) => [{
 								},
 							],
 						},
+						{
+							title: t('Stats'),
+							items: [
+								{
+									emoji: ':smiley:',
+									chart: {
+										array: [1, 10, 15, 20],
+										type: 'bar',
+										options: {
+											disableTooltips: true,
+										},
+									},
+									modifier: 'happy',
+									action: () => console.log('Happy Selected!'),
+								},
+								{
+									emoji: ':rage:',
+									chart: {
+										array: [10, 25, 15, 20],
+										type: 'bar',
+										options: {
+											disableTooltips: true,
+										},
+									},
+									modifier: 'angry',
+									action: () => console.log('Angry Selected!'),
+								},
+								{
+									emoji: ':sleepy:',
+									chart: {
+										array: [15, 10, 15, 90],
+										type: 'bar',
+										options: {
+											disableTooltips: true,
+										},
+									},
+									modifier: 'lazy',
+									action: () => console.log('Lazy Selected!'),
+								},
+								{
+									emoji: ':sob:',
+									chart: {
+										array: [51, 10, 7, 20],
+										type: 'bar',
+										options: {
+											disableTooltips: true,
+										},
+									},
+									modifier: 'cry',
+									action: () => console.log('Crying Selected!'),
+								},
+							],
+						},
 					],
 				},
 			],
