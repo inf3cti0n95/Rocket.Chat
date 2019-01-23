@@ -69,6 +69,54 @@ export const toolbarSearch = {
 };
 
 const toolbarButtons = (user) => [{
+	name: t('Mood'),
+	icon: 'emoji',
+	action: (e) => {
+		// const hideAvatarSetting = getUserPreference(user, 'sidebarHideAvatar');
+		const config = {
+			columns: [
+				{
+					groups: [
+						{
+							title: t('User Moods'),
+							items: [
+								{
+									emoji: ':smiley:',
+									name: t('Happy'),
+									modifier: 'happy',
+									action: () => console.log('Happy Selected!'),
+								},
+								{
+									emoji: ':rage:',
+									name: t('Angry'),
+									modifier: 'angry',
+									action: () => console.log('Angry Selected!'),
+								},
+								{
+									emoji: ':sleepy:',
+									name: t('Lazy'),
+									modifier: 'lazy',
+									action: () => console.log('Lazy Selected!'),
+								},
+								{
+									emoji: ':sob:',
+									name: t('Crying'),
+									modifier: 'cry',
+									action: () => console.log('Crying Selected!'),
+								},
+							],
+						},
+					],
+				},
+			],
+			currentTarget: e.currentTarget,
+			offsetVertical: e.currentTarget.clientHeight + 10,
+		};
+
+		popover.open(config);
+	},
+},
+{
 	name: t('Search'),
 	icon: 'magnifier',
 	action: () => {
