@@ -22,7 +22,14 @@
 										{{#if item.emoji}}
 											{{> renderEmoji item.emoji}}
 										{{/if}}
-										<span class="rc-popover__item-text">{{_ item.name}}</span>
+										<span class="rc-popover__item-text">
+											{{#if item.name}}
+												{{_ item.name}}
+											{{/if}}
+											{{#if item.chart}}
+												{{> sparkline item.chart}}
+											{{/if}}
+										</span>
 									</li>
 									{{/with}}
 								{{/each}}
